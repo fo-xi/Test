@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 
 namespace View
 {
-    /// <summary>
-    /// Interaction logic for ListFiles.xaml
-    /// </summary>
-    public partial class ListFiles : UserControl
-    {
-        public ListFiles()
-        {
-            InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// Interaction logic for Files.xaml
+	/// </summary>
+	public partial class Files : UserControl
+	{
+		public Files()
+		{
+			InitializeComponent();
+		}
+	}
 }
