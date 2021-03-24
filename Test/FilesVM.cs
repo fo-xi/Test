@@ -72,6 +72,8 @@ namespace Test
 		/// <param name="sender">Sender.</param>
 		private void Add(object sender)
 		{
+			_addFileWindowService.OpenFileDialog();
+
 			if (_addFileWindowService.DialogResult)
 			{
 				Files.Add(new FileVM(_addFileWindowService.FileName, new Command(Remove)));
@@ -102,10 +104,9 @@ namespace Test
 		/// <param name="addFileWindowService">AddFile Window.</param>
 		/// <param name="files">File list.</param>
 		public FilesVM(IMessageBoxService messageBoxService,
-			IAddFileWindowService addFileWindowService,
-			ObservableCollection<FileVM> files)
+			IAddFileWindowService addFileWindowService)
 		{
-			Files = files;
+			Files = new ObservableCollection<FileVM>();
 
 			_messageBoxService = messageBoxService;
 			_addFileWindowService = addFileWindowService;

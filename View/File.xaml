@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:View" xmlns:test="clr-namespace:Test;assembly=Test" 
              d:DataContext="{d:DesignInstance Type=test:FileVM}"
              mc:Ignorable="d" 
-             d:DesignHeight="45" d:DesignWidth="800">
+             d:DesignHeight="35" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -15,7 +15,7 @@
 
         <TextBlock
             Grid.Column="0"
-            Margin="5"
+            Margin="1"
             Text="{Binding Name}"
             HorizontalAlignment="Left"
             VerticalAlignment="Center">
@@ -23,13 +23,13 @@
 
         <Button
             Grid.Column="1"
-            Margin="5"
+            Margin="1"
             VerticalAlignment="Center"
             Command="{Binding RemoveCommand}"
             Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
             <Image
-                Width="30"
-                Height="30"
+                Width="20"
+                Height="20"
                 Source="/Resources/remove.png" />
         </Button>
     </Grid>

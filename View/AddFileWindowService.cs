@@ -33,7 +33,6 @@ namespace View
 				FileName = Path.GetFileName(openFileDialog.FileName);
 				DialogResult = true;
 			}
-			DialogResult = false;
 		}
 	}
 }
