@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:View" xmlns:test="clr-namespace:Test;assembly=Test" 
         d:DataContext="{d:DesignInstance Type=test:MainWindowVM}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="400">
     <Grid>
         <local:Files
             DataContext="{Binding FilesVM}" />

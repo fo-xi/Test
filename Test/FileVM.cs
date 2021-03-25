@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    public class FileVM : NotifyPropertyChanged
+    public class FileVM : NotifyDataError
     {
         /// <summary>
         /// File Name.
@@ -19,6 +19,17 @@ namespace Test
         public Command RemoveCommand { get; set; }
 
         /// <summary>
+        /// Property indicates whether there are any validation errors.
+        /// </summary>
+        public override bool HasErrors
+        {
+	        get
+	        {
+		        return _errorsByPropertyName.Any();
+	        }
+        }
+
+        /// <summary>
         /// Returns and sets File Name.
         /// </summary>
         public string Name
@@ -29,8 +40,10 @@ namespace Test
             }
             set
             {
+	            Validate(value, nameof(Name));
                 _name = value;
                 OnPropertyChanged(nameof(Name));
+                OnPropertyChanged(nameof(HasErrors));
             }
         }
 

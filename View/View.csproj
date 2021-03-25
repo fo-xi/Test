@@ -67,7 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddFileWindowService.cs" />
+    <Compile Include="Service\AddFileWindowService.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -88,7 +88,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageBoxService.cs" />
+    <Compile Include="Service\MessageBoxService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,5 +126,6 @@
   <ItemGroup>
     <Resource Include="Resources\add.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
