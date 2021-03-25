@@ -26,11 +26,11 @@
             Margin="1"
             VerticalAlignment="Center"
             Command="{Binding RemoveCommand}"
-            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            Style="{StaticResource ButtonStyle}">
             <Image
                 Width="20"
                 Height="20"
-                Source="/Resources/remove.png" />
+                Source="/Resources/delete.png" />
         </Button>
     </Grid>
 </UserControl>
