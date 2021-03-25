@@ -86,14 +86,7 @@ namespace Test
 		/// <param name="sender">Sender.</param>
 		private void Remove(object sender)
 		{
-			var selectedFile = SelectedFile;
-
-			if (selectedFile == null)
-			{
-				_messageBoxService.Show("Select File!");
-				return;
-			}
-
+			var selectedFile = (FileVM)sender;
 			Files.Remove(selectedFile);
 		}
 

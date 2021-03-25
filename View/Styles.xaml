@@ -12,4 +12,12 @@
         </Style.Triggers>
     </Style>
 
+    <Style x:Key="ControlStyle" TargetType="{x:Type UserControl}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=HasErrors}" Value="True">
+                <Setter Property="Background" Value="#FEE" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
 </ResourceDictionary>

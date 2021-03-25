@@ -21,7 +21,7 @@
             Margin="1"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
-            Text="{Binding Name}" />
+            Text="{Binding Name, ValidatesOnNotifyDataErrors=False}" />
 
         <Button
             Grid.Column="1"
@@ -33,6 +33,9 @@
                 Width="20"
                 Height="20"
                 Source="/Resources/delete.png" />
+            <Button.CommandParameter>
+                <Binding/>
+            </Button.CommandParameter>
         </Button>
     </Grid>
 </UserControl>

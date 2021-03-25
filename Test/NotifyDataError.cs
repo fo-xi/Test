@@ -24,7 +24,12 @@ namespace Test
         /// <returns></returns>
         public IEnumerable GetErrors(string propertyName)
         {
-            return _errorsByPropertyName.ContainsKey(propertyName) ?
+	        if (propertyName == null)
+	        {
+		        return null;
+	        }
+
+	        return _errorsByPropertyName.ContainsKey(propertyName) ?
                 _errorsByPropertyName[propertyName] : null;
         }
 
@@ -92,7 +97,7 @@ namespace Test
         public void Validate(string fileName, string propertyName)
         {
             ClearErrors(propertyName);
-            if (!fileName.Contains(".exe") || !fileName.Contains(".dll"))
+            if (!fileName.Contains(".exe") && !fileName.Contains(".dll"))
             {
                 AddError(propertyName, "File is not a *.exe or *.dll file");
             }
