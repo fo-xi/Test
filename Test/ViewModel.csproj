@@ -42,13 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
-    <Compile Include="FileVM.cs" />
-    <Compile Include="NotifyDataError.cs" />
+    <Compile Include="Controls\FileVM.cs" />
+    <Compile Include="Notifiers\NotifyDataError.cs" />
     <Compile Include="Service\IAddFileWindowService.cs" />
     <Compile Include="Service\IMessageBoxService.cs" />
-    <Compile Include="FilesVM.cs" />
+    <Compile Include="Controls\FilesVM.cs" />
     <Compile Include="MainWindowVM.cs" />
-    <Compile Include="NotifyPropertyChanged.cs" />
+    <Compile Include="Notifiers\NotifyPropertyChanged.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

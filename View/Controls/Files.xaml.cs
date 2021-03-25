@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Test;
 
-namespace View
+namespace View.Controls
 {
 	/// <summary>
 	/// Interaction logic for Files.xaml

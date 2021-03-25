@@ -55,11 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="File.xaml">
+    <Page Include="Controls\File.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Files.xaml">
+    <Page Include="Controls\Files.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,10 +72,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="File.xaml.cs">
+    <Compile Include="Controls\File.xaml.cs">
       <DependentUpon>File.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Files.xaml.cs">
+    <Compile Include="Controls\Files.xaml.cs">
       <DependentUpon>Files.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
