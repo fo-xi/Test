@@ -8,7 +8,8 @@ using Test.Notifiers;
 
 namespace Test
 {
-    public class MainWindowVM : NotifyPropertyChanged
+    // TODO: оформление кода? везде
+	public class MainWindowVM : NotifyPropertyChanged
     {
 	    private FilesVM _filesVM;
 

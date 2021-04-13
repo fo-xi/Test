@@ -27,7 +27,7 @@ namespace View
 		public void OpenFileDialog()
 		{
 			OpenFileDialog openFileDialog = new OpenFileDialog();
-
+            // TODO: преобразовывать bool? в bool небезопасно
 			if ((bool)openFileDialog.ShowDialog())
 			{
 				FileName = Path.GetFileName(openFileDialog.FileName);

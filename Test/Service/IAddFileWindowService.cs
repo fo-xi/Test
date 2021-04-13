@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Test
 {
+    // TODO: Сделать добавление множества файлов, а не по одному
 	/// <summary>
 	/// Сlass responsible for showing window.
 	/// </summary>

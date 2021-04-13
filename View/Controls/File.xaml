@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-
+<!--TODO: строчки слишком широкие (по высоте) в листбоксе, в макете были уже-->
         <TextBlock
             Grid.Column="0"
             Margin="1"

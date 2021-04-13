@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Test.Notifiers
 {
+    // TODO: попробуй вместо этих классов использовать GalaSoft.MvvmLight,
+    // ..там уже есть ViewModelBase и RelayCommand
     public class NotifyPropertyChanged : INotifyPropertyChanged
     {
         /// <summary>

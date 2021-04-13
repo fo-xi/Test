@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Test.Notifiers
 {
-	public class NotifyDataError : NotifyPropertyChanged, INotifyDataErrorInfo
+    // TODO: все замечания по именованию, которые были в ContactsApp - исправить и здесь тоже
+    public class NotifyDataError : NotifyPropertyChanged, INotifyDataErrorInfo
 	{
 
         /// <summary>
