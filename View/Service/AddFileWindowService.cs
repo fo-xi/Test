@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Win32;
 using System.IO;
-using System.Windows.Documents;
 using Test;
 
 namespace View
@@ -12,12 +11,12 @@ namespace View
 	public class AddFileWindowService : IAddFileWindowService
 	{
 		/// <summary>
-		/// DialogResult.
+		/// Returns and sets DialogResult.
 		/// </summary>
 		public bool DialogResult { get; set; }
 
 		/// <summary>
-		/// FileName.
+		/// Returns and sets FileName.
 		/// </summary>
 		public string[] FileName { get; set; }
 

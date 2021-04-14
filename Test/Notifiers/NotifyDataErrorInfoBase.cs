@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using GalaSoft.MvvmLight;
 
 namespace Test.Notifiers
 {
@@ -10,7 +11,7 @@ namespace Test.Notifiers
     /// <summary>
     /// The class that is responsible for the action that will occur when an error occurs.
     /// </summary>
-    public class NotifyDataErrorInfoBase : NotifyPropertyChangedBase, INotifyDataErrorInfo
+    public class NotifyDataErrorInfoBase : ViewModelBase, INotifyDataErrorInfo
 	{
 		/// <summary>
         /// Contains a dictionary of errors.

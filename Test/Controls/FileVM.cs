@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 using Test.Notifiers;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace Test.Controls
 {
@@ -16,7 +18,7 @@ namespace Test.Controls
         /// <summary>
         /// Returns and sets RemoveCommand.
         /// </summary>
-        public Command RemoveCommand { get; set; }
+        public RelayCommand<object> RemoveCommand { get; set; }
 
         /// <summary>
         /// Property indicates whether there are any validation errors.
@@ -42,8 +44,8 @@ namespace Test.Controls
             {
 	            Validate(value, nameof(Name));
                 _name = value;
-                OnPropertyChanged(nameof(Name));
-                OnPropertyChanged(nameof(HasErrors));
+                RaisePropertyChanged(nameof(Name));
+                RaisePropertyChanged(nameof(HasErrors));
             }
         }
 
@@ -52,7 +54,7 @@ namespace Test.Controls
         /// </summary>
         /// <param name="name">File Name</param>
         /// <param name="remove">RemoveCommand</param>
-        public FileVM(string name, Command remove)
+        public FileVM(string name, RelayCommand<object> remove)
         {
 	        Name = name;
 	        RemoveCommand = remove;

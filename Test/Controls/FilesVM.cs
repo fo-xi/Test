@@ -1,12 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using Test.Notifiers;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace Test.Controls
 {
 	/// <summary>
 	/// View Model for files control.
 	/// </summary>
-	public class FilesVM : NotifyPropertyChangedBase
+	public class FilesVM : ViewModelBase
     {
 		/// <summary>
 		/// List of all files.
@@ -25,7 +27,7 @@ namespace Test.Controls
 			set
 			{
 				_files = value;
-				OnPropertyChanged(nameof(Files));
+				RaisePropertyChanged(nameof(Files));
 			}
 		}
 
@@ -37,13 +39,13 @@ namespace Test.Controls
 		/// <summary>
 		/// Returns and sets AddCommand.
 		/// </summary>
-		public Command AddCommand { get; set; }
+		public RelayCommand AddCommand { get; set; }
 
 		/// <summary>
 		/// Add file.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
-		private void Add(object sender)
+		private void Add()
 		{
 			_addFileWindowService.OpenFileDialog();
 
@@ -51,7 +53,7 @@ namespace Test.Controls
 			{
 				foreach (var fileName in _addFileWindowService.FileName)
 				{
-					Files.Add(new FileVM(fileName, new Command(Remove)));
+					Files.Add(new FileVM(fileName, new RelayCommand<object>(Remove)));
 				}
 			}
 		}
@@ -77,7 +79,7 @@ namespace Test.Controls
 
 			_addFileWindowService = addFileWindowService;
 
-			AddCommand = new Command(Add);
+			AddCommand = new RelayCommand(Add);
 		}
 	}
 }

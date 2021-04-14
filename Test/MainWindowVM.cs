@@ -1,4 +1,5 @@
-﻿using Test.Controls;
+﻿using GalaSoft.MvvmLight;
+using Test.Controls;
 using Test.Notifiers;
 
 namespace Test
@@ -7,7 +8,7 @@ namespace Test
 	/// <summary>
 	/// View Model for window MainWindow.
 	/// </summary>
-	public class MainWindowVM : NotifyPropertyChangedBase
+	public class MainWindowVM : ViewModelBase
     {
 		/// <summary>
 		/// Files.
@@ -26,7 +27,7 @@ namespace Test
 		    set
 		    {
 			    _filesVM = value;
-				OnPropertyChanged(nameof(FilesVM));
+				RaisePropertyChanged(nameof(FilesVM));
 		    }
 	    }
 
