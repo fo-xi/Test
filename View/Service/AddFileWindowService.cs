@@ -1,14 +1,12 @@
 ﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Test;
 
 namespace View
 {
+	/// <summary>
+	/// Shows a window for adding files.
+	/// </summary>
 	public class AddFileWindowService : IAddFileWindowService
 	{
 		/// <summary>
