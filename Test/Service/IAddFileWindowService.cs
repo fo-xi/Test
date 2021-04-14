@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    // TODO: Сделать добавление множества файлов, а не по одному
+    // TODO: Сделать добавление множества файлов, а не по одному (+)
 	/// <summary>
 	/// Сlass responsible for showing window.
 	/// </summary>
@@ -14,7 +14,7 @@
 		/// <summary>
 		/// FileName.
 		/// </summary>
-		string FileName { get; set; }
+		string[] FileName { get; set; }
 
 		/// <summary>
 		/// Opens a window for adding file.

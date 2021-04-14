@@ -49,7 +49,10 @@ namespace Test.Controls
 
 			if (_addFileWindowService.DialogResult)
 			{
-				Files.Add(new FileVM(_addFileWindowService.FileName, new Command(Remove)));
+				foreach (var fileName in _addFileWindowService.FileName)
+				{
+					Files.Add(new FileVM(fileName, new Command(Remove)));
+				}
 			}
 		}
 

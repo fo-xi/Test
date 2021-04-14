@@ -5,8 +5,12 @@ using System.Windows.Media;
 
 namespace View.Converters
 {
+	/// <summary>
+	/// BackgroundConverter.
+	/// </summary>
 	public class BackgroundConverter : IValueConverter
 	{
+		/// <inheritdoc />
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			var hasErrors = (bool) value;
@@ -16,9 +20,10 @@ namespace View.Converters
 				return (SolidColorBrush)(new BrushConverter().ConvertFrom("#FEE"));
 			}
 
-			return (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
+			return Brushes.Transparent;
 		}
 
+		/// <inheritdoc />
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			throw new NotImplementedException();

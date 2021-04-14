@@ -1,5 +1,7 @@
-﻿using Microsoft.Win32;
+﻿using System.Collections.Generic;
+using Microsoft.Win32;
 using System.IO;
+using System.Windows.Documents;
 using Test;
 
 namespace View
@@ -17,7 +19,7 @@ namespace View
 		/// <summary>
 		/// FileName.
 		/// </summary>
-		public string FileName { get; set; }
+		public string[] FileName { get; set; }
 
 		/// <summary>
 		/// Opens a window for adding file.
@@ -25,10 +27,17 @@ namespace View
 		public void OpenFileDialog()
 		{
 			OpenFileDialog openFileDialog = new OpenFileDialog();
-            // TODO: преобразовывать bool? в bool небезопасно (+)
+			openFileDialog.Multiselect = true;
+			// TODO: преобразовывать bool? в bool небезопасно (+)
 			if ((bool?)openFileDialog.ShowDialog() == true)
 			{
-				FileName = Path.GetFileName(openFileDialog.FileName);
+				var listNames = new List<string>();
+				foreach (var fileName in openFileDialog.FileNames)
+				{
+					listNames.Add(Path.GetFileName(fileName));
+				}
+
+				FileName = listNames.ToArray();
 				DialogResult = true;
 			}
 		}
