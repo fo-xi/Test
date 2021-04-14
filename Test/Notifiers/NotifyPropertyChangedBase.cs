@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Test.Notifiers
 {
     // TODO: попробуй вместо этих классов использовать GalaSoft.MvvmLight,
     // ..там уже есть ViewModelBase и RelayCommand
-    public class NotifyPropertyChanged : INotifyPropertyChanged
+    /// <summary>
+    /// The class that is responsible for notifying the client about the change in the property value.
+    /// </summary>
+    public class NotifyPropertyChangedBase : INotifyPropertyChanged
     {
         /// <summary>
         /// Event that will react to changes in the property.

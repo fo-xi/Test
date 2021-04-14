@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Test
 {
+    /// <summary>
+    /// The class that is responsible for the command.
+    /// </summary>
     public class Command : ICommand
     {
         /// <summary>

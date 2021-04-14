@@ -21,7 +21,7 @@ namespace View
     /// </summary>
     public partial class MainWindow : Window
     {
-	    MainWindowVM _mainWindow = new MainWindowVM(new MessageBoxService(), new AddFileWindowService());
+	    MainWindowVM _mainWindow = new MainWindowVM(new AddFileWindowService());
 
         public MainWindow()
         {

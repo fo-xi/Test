@@ -43,12 +43,11 @@
   <ItemGroup>
     <Compile Include="Command.cs" />
     <Compile Include="Controls\FileVM.cs" />
-    <Compile Include="Notifiers\NotifyDataError.cs" />
+    <Compile Include="Notifiers\NotifyDataErrorInfoBase.cs" />
     <Compile Include="Service\IAddFileWindowService.cs" />
-    <Compile Include="Service\IMessageBoxService.cs" />
     <Compile Include="Controls\FilesVM.cs" />
     <Compile Include="MainWindowVM.cs" />
-    <Compile Include="Notifiers\NotifyPropertyChanged.cs" />
+    <Compile Include="Notifiers\NotifyPropertyChangedBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

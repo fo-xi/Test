@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Test.Controls;
+﻿using Test.Controls;
 using Test.Notifiers;
 
 namespace Test
 {
-    // TODO: оформление кода? везде
-	public class MainWindowVM : NotifyPropertyChanged
+	// TODO: оформление кода? везде (+)
+	/// <summary>
+	/// View Model for window MainWindow.
+	/// </summary>
+	public class MainWindowVM : NotifyPropertyChangedBase
     {
+		/// <summary>
+		/// Files.
+		/// </summary>
 	    private FilesVM _filesVM;
 
-	    public FilesVM FilesVM
+		/// <summary>
+		/// Returns and sets files.
+		/// </summary>
+		public FilesVM FilesVM
 	    {
 		    get
 		    {
@@ -26,10 +30,13 @@ namespace Test
 		    }
 	    }
 
-	    public MainWindowVM(IMessageBoxService messageBoxService,
-		    IAddFileWindowService addFileWindowService)
+		/// <summary>
+		/// Files creation.
+		/// </summary>
+		/// <param name="addFileWindowService">Add file window.</param>
+		public MainWindowVM(IAddFileWindowService addFileWindowService)
 	    {
-		    FilesVM = new FilesVM(messageBoxService, addFileWindowService);
+		    FilesVM = new FilesVM(addFileWindowService);
 	    }
     }
 }

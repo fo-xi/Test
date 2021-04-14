@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Test.Notifiers
 {
-    // TODO: все замечания по именованию, которые были в ContactsApp - исправить и здесь тоже
-    public class NotifyDataError : NotifyPropertyChanged, INotifyDataErrorInfo
+    // TODO: все замечания по именованию, которые были в ContactsApp - исправить и здесь тоже (+)
+    /// <summary>
+    /// The class that is responsible for the action that will occur when an error occurs.
+    /// </summary>
+    public class NotifyDataErrorInfoBase : NotifyPropertyChangedBase, INotifyDataErrorInfo
 	{
-
-        /// <summary>
+		/// <summary>
         /// Contains a dictionary of errors.
         /// </summary>
         protected readonly Dictionary<string, List<string>> _errorsByPropertyName

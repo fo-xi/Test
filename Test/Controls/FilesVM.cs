@@ -3,17 +3,15 @@ using Test.Notifiers;
 
 namespace Test.Controls
 {
-    public class FilesVM : NotifyPropertyChanged
+	/// <summary>
+	/// View Model for files control.
+	/// </summary>
+	public class FilesVM : NotifyPropertyChangedBase
     {
 		/// <summary>
 		/// List of all files.
 		/// </summary>
 		public ObservableCollection<FileVM> _files;
-
-		/// <summary>
-		/// Selected File.
-		/// </summary>
-		private FileVM _selectedFile;
 
 		/// <summary>
 		/// Returns and sets a list of all files.
@@ -32,11 +30,6 @@ namespace Test.Controls
 		}
 
 		/// <summary>
-		/// Responsible for calling the MessageBox.
-		/// </summary>
-		private IMessageBoxService _messageBoxService;
-
-		/// <summary>
 		/// Responsible for calling the AddFileWindowService.
 		/// </summary>
 		private IAddFileWindowService _addFileWindowService;
@@ -45,22 +38,6 @@ namespace Test.Controls
 		/// Returns and sets AddCommand.
 		/// </summary>
 		public Command AddCommand { get; set; }
-
-		/// <summary>
-		/// Returns and sets selected File.
-		/// </summary>
-		public FileVM SelectedFile
-		{
-			get
-			{
-				return _selectedFile;
-			}
-			set
-			{
-				_selectedFile = value;
-				OnPropertyChanged(nameof(SelectedFile));
-			}
-		}
 
 		/// <summary>
 		/// Add file.
@@ -89,15 +66,12 @@ namespace Test.Controls
 		/// <summary>
 		/// Creates a file list.
 		/// </summary>
-		/// <param name="messageBoxService">MessageBox.</param>
 		/// <param name="addFileWindowService">AddFile Window.</param>
 		/// <param name="files">File list.</param>
-		public FilesVM(IMessageBoxService messageBoxService,
-			IAddFileWindowService addFileWindowService)
+		public FilesVM(IAddFileWindowService addFileWindowService)
 		{
 			Files = new ObservableCollection<FileVM>();
 
-			_messageBoxService = messageBoxService;
 			_addFileWindowService = addFileWindowService;
 
 			AddCommand = new Command(Add);

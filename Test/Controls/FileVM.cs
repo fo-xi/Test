@@ -3,7 +3,10 @@ using Test.Notifiers;
 
 namespace Test.Controls
 {
-    public class FileVM : NotifyDataError
+    /// <summary>
+    /// View Model for file control.
+    /// </summary>
+    public class FileVM : NotifyDataErrorInfoBase
     {
         /// <summary>
         /// File Name.
