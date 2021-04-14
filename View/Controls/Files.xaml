@@ -14,8 +14,7 @@
 
     <UserControl.Resources>
         <DataTemplate x:Key="FileControl">
-            <local1:File HorizontalAlignment="Stretch" 
-                         Style="{StaticResource ControlStyle}" />
+            <local1:File HorizontalAlignment="Stretch"/>
         </DataTemplate>
     </UserControl.Resources>
 

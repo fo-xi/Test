@@ -7,11 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:test="clr-namespace:Test;assembly=Test"
     xmlns:controls="clr-namespace:Test.Controls;assembly=Test"
+    xmlns:converters="clr-namespace:View.Converters"
     d:DataContext="{d:DesignInstance Type=controls:FileVM}"
     d:DesignHeight="20"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid>
+    <UserControl.Resources>
+        <converters:BackgroundConverter x:Key="BackgroundConverter"/>
+    </UserControl.Resources>
+    <Grid Background="{Binding HasErrors, Converter={StaticResource BackgroundConverter}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
